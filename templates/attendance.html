@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+
+{% block title %}Attendace{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5 mb-4">{{namee}}'s Attendance</h1>
+    <table class="table table-bordered">
+        <thead class="bg-light">
+            <tr>
+                <th>S.No.</th>
+                <th>Subject Name</th>
+                <th>Total Lecture</th>
+                <th>Total Present</th>
+                <th>Total Absent</th>
+                <th>Leave of Absence</th>
+                <th>Attendance (%)</th>
+                <th>Leaves Affordable</th>
+                <th>Must Attend Classes</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+            <tr>
+                <td>{{ entry["S.No."] }}</td>
+                <td>{{ entry["Subject Name"] }}</td>
+                <td>{{ entry["Total Lecture"] }}</td>
+                <td>{{ entry["Total Present"] }}</td>
+                <td>{{ entry["Total Absent"] }}</td>
+                <td>{{ entry["Leave of Absence"] }}</td>
+                <td>{{ entry["Attendance (%)"] }}</td>
+                <td>{{ entry["Leaves Affordable"] }}</td>
+                <td>{{ entry["Must Attend Class"] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

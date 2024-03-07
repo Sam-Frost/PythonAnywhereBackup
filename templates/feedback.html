@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+
+{% block title %}Feedback{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center mt-5">Feedback Page</h1>
+            <form action="/ncu/feedback" method="post" class="mt-4">
+                <div class="form-group">
+                    <textarea class="form-control" id="feedback" name="feedback" rows="4" placeholder="Enter your feedback"></textarea>
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
